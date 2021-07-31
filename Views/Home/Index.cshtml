@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron bg-light text-center">
+    <div class="text-center">
+        <h1 class="display-1 text-danger"><i class="fa fa-fire-extinguisher"></i></h1>
+        <h1 class="display-4 mb-3">Selamat Datang Di Web Pemadam Api</h1>
+        <p class="lead">Web ini dibuat menggunakan Framework MVC ASP.NET Core versi 5.0</p>
+        <p class="lead">Web ini berfungsi sebagai monitoring keadaan ruangan terhadap adanya api secara realtime, serta memberikan informasi jam dan tanggal terdeteksinya api.</p>
+        <hr class="my-4">
+        <p>Silahkah klik tombol dibawah untuk melihat kondisi dan catatan saat api terdeteksi</p>
+        <a class="btn btn-primary btn-lg" asp-controller="Home" asp-action="Kondisi">Cek kondisi</a>
+        <a class="btn btn-primary btn-lg ml-3" asp-controller="Home" asp-action="CatatanApi">Catatan Api</a>
+    </div>
+</div>

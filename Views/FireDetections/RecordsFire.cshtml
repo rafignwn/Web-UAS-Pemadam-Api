@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Catatan Kebakaran";
+}
+@model IList<Web_UAS.Models.Fire>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h1 class=" text-center my-4 mb-2">Catatan Saat Api Terdeteksi</h1>
+            <table class="table table-bordered mt-2">
+                <thead class="table-dark">
+                    <tr>
+                        <td>#</td>
+                        <td>Jam Saat Api Terdeteksi</td>
+                        <td>Tanggal Saat Api Terdeteksi</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{int i = 1;}
+                    @foreach (var data in Model)
+                    { 
+                    <tr>
+                        <td>@i</td>@{i++;}
+                        <td>@Html.DisplayFor(modelItem => data.jam) WIB</td>
+                        <td>@Html.DisplayFor(modelItem => data.tanggal)</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

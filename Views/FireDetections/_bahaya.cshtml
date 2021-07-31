@@ -1,0 +1,15 @@
+@{
+    string tanggal = DeteksiApi.tanggal;
+    string jam = DeteksiApi.jam;
+}
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <div class="text-center px-3 py-4 my-4">
+            <h1 class="text-danger d-block mb-3 display-2"><i class="fa fa-exclamation-triangle"></i></h1>
+            <h1 class="display-4 font-weight-bold">Kondisi Bahaya</h1>
+            <p class="lead">Telah terjdi kebakaran pada tanggal @tanggal jam @jam, penghuni harap segera ke tempat yang aman dari kobaran api</p>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>

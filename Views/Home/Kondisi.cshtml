@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Kondisi";
+}
+@* script update halaman setiap 4 detik tanpa melakukan refresh halaman *@
+<script>
+    $(document).ready(function(){
+        setInterval(function(){getData()}, 2500);
+        function getData(){
+            jQuery.ajax({
+                method : "GET",
+                url : "http://localhost:5000/FireDetections/Kondisi",
+                data : "",
+                beforeSend : function(){},
+                complete : function(){},
+                success : function (data){
+                    $("body").html(data);
+                }
+            });
+        }
+    });
+</script>

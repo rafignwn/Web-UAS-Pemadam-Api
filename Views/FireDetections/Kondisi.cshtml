@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Kondisi";
+    var fireValue = DeteksiApi.staticFireValue;
+    if (fireValue == null)
+    {
+        fireValue = "1";
+    }
+}
+@if (fireValue == "1")
+    {
+        <partial name="_aman"/>
+    }
+else if (fireValue == "0")
+    {
+        <partial name="_bahaya"></partial>
+    }
